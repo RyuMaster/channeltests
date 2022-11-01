@@ -26,6 +26,8 @@ AX_CHECK_COMPILE_FLAG([-Wno-deprecated],
 # See https://hpc.nih.gov/development/glog.html.
 CXXFLAGS="${CXXFLAGS} -DGLOG_NO_ABBREVIATED_SEVERITIES"
 
+AX_PKG_CHECK_MODULES([OPENSSL], [], [openssl])
+
 AC_CONFIG_FILES([
   gamechannel/Makefile \
   xayautil/Makefile \
